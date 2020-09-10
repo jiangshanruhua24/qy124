@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id='ull'>
+
+    </ul>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/doT.min.js"></script>
+    <script id="xuan" type="text/x-dot-template">
+        {{~it.s.list:value:index}}
+        <li>
+            <img src={{=value.backgroundImage}} alt={{=value.h5Link}}>
+            <h3>{{=value.title}}</h3>
+            {{=value.sort}}
+        </li>
+        {{~ }}
+        {{~it.a.list:value:index}}
+        <li>
+            <img src={{=value.image}} alt={{=value.h5Link}}>
+            <h3>{{=value.title}}</h3>
+            {{=value.sort}}
+            {{=value.cid}}
+        </li>
+        {{~ }}
+    </script>
+    <script>
+        // $(document).ready(function(){
+        //     $.ajax({
+        //             url:'js/首页-推荐.json',
+        //             type:'get',
+        //             success(res){
+        //                 res=res.data;
+        //                 console.log(res);
+        //                 var tempt=doT.template($('#xuan').text());
+        //                 $('#ull').html(tempt(res));             
+        //             },
+        //             error(err){
+        //                 console.log('qingqiushibai');
+        //             }
+        //         })
+        
+        // })
+      
+    </script>
+    
+    <script>
+        var a=[2,3,4,5];
+        a.pop();
+        console.log(a);
+    </script>
+</body>
+</html>
